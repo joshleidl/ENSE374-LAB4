@@ -1,0 +1,7 @@
+RESPONSIBILITIES
+
+Konstantin: Map implementation
+Nathan, Josh, Jeremy: Animal implementation
+  Josh: Energy, UML
+  Nathan: Movement
+  Jeremy: Can eat implementation
