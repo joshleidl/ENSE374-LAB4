@@ -1,0 +1,7 @@
+100 x 100 grid (can expand)
+1 animal per grid
+if animal moves to occupied grid the higher of the foodchain eats the other
+
+animals need diffrent movement speeds
+animals need different hunger amounts
+how far can animals move?
