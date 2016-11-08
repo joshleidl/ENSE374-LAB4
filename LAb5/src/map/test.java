@@ -7,6 +7,7 @@ public class test
 	
 	public static void main(String[] args)
 	{
+		a.setBorder();
 		a.Clear();
 		a.Print();
 	}

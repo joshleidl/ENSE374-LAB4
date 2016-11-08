@@ -8,22 +8,34 @@ public class map
 	public static final char blank 		= ' ';
 	private int max_rows 	= 10;
 	private int max_columns = 10;
-	private int row 		= 5;
-	private int column 		= 5;
+	private int row;
+	private int column;
 	private char[][] field;
 	
-	private int rowDifference(int input)
+	public int rowDifference(int input)
 	{
 		int result;
 		result = max_rows - input;
 		return result;
 	}
 	
-	private int columnDifference(int input)
+	public int columnDifference(int input)
 	{
 		int result;
 		result = max_columns - input;
 		return result;
+	}
+	
+	public void setBorder()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Rows: ");
+		int rowInput = in.nextInt();
+		System.out.print("Column: ");
+		int columnInput = in.nextInt();
+		row = rowDifference(rowInput);
+		column = rowDifference(columnInput);
+		in.close();
 	}
 	
 	public void Clear()
