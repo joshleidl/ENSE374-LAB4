@@ -6,24 +6,20 @@ public class map
 {
 	public static final char line		= '|';
 	public static final char blank 		= ' ';
-	private int max_rows 	= 10;
-	private int max_columns = 10;
+	private int max_rows 	= 10000;
+	private int max_columns = 10000;
 	private int row;
 	private int column;
 	private char[][] field;
 	
 	public int rowDifference(int input)
 	{
-		int result;
-		result = max_rows - input;
-		return result;
+		return (max_rows - input);
 	}
 	
 	public int columnDifference(int input)
 	{
-		int result;
-		result = max_columns - input;
-		return result;
+		return (max_columns - input);
 	}
 	
 	public void setBorder()
@@ -33,8 +29,8 @@ public class map
 		int rowInput = in.nextInt();
 		System.out.print("Column: ");
 		int columnInput = in.nextInt();
-		row = rowDifference(rowInput);
-		column = rowDifference(columnInput);
+		row = rowInput;
+		column = columnInput;
 		in.close();
 	}
 	
