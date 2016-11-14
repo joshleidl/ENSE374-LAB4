@@ -11,12 +11,17 @@ Implement maximum movement variable N
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.ArrayList;
 
+/*
+Max distance variable maxDistance
+*/
+
 public abstract class animal extends organism
 {
 	protected int maxEnergy;
 	protected char canEat[];
 	protected int row;
 	protected int col;
+	protected int maxDistance;
 	
 	private boolean checkEat(organism org)
 	{
