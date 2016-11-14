@@ -1,6 +1,7 @@
 package mapping;
 
 import java.util.*;
+import java.util.ArrayList;
 
 public class map
 {
@@ -12,6 +13,7 @@ public class map
 	private int row;
 	private int column;
 	private char field[][];
+	private ArrayList<organism> creatureList = new ArrayList<organism>;
 	
 	public int getRows()
 	{
@@ -100,6 +102,14 @@ public class map
 				
 				System.out.print('\n');
 			}
+		}
+	}
+	
+	private void takeTurn()
+	{
+		for (organism current : creatureList)
+		{
+			current.moveCreature(column, row, creatureList);
 		}
 	}
 }
