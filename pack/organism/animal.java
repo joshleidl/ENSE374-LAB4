@@ -1,13 +1,15 @@
 package foodChain;
 
-public interface animal extends organism
+public abstract class animal extends organism
 {
-	private static int maxEnergy;
-	private organism canEat[];
+	protected int maxEnergy;
+	protected char canEat[];
+	protected int row;
+	protected int col;
 	
 	private boolean checkEat(organism org)
 	{
-		for(int i = 0; i < canEat.length(); i++)
+		for(int i = 0; i < canEat.length; i++)
 			if(canEat[i] == org.getSymbol())
 				return true;
 			
@@ -33,5 +35,7 @@ public interface animal extends organism
 			//CASE: Contact is inedible
 			return false;
 	}
-	public void move(int cx, int cy);
+	
+	public boolean move()
+	//public abstract void move(int cx, int cy);
 }
