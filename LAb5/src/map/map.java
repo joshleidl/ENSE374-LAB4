@@ -67,7 +67,6 @@ public class map
 		{
 			if ((i >= 0) || (j >= 0) || (k >= 0) || (l >= 0) || (q >= 0))
 			{
-			
 				for(i = 0; i < (max_columns - columnDifference(column)) + 2; i++)
 				{
 					System.out.print(line);
