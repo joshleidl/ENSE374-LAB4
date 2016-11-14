@@ -7,6 +7,6 @@ public class fox extends carnivore
 		maxEnergy = 1000;
 		energy = 1000;
 		
-		canEat[] = {'S', 'M', 'R', 'B'};
+		char canEat[] = {'S', 'M', 'R', 'B'};
 	}
 }

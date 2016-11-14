@@ -7,6 +7,6 @@ public class squirrel extends herbivore
 		maxEnergy = 750;
 		energy = 750;
 		
-		canEat[] = {'T'};
+		char canEat[] = {'T'};
 	}
 }

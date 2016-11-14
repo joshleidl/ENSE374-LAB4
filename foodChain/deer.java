@@ -7,6 +7,6 @@ public class deer extends herbivore
 		maxEnergy = 1000;
 		energy = 1000;
 		
-		canEat[] = {'T', 'G'};
+		char canEat[] = {'T', 'G'};
 	}
 }

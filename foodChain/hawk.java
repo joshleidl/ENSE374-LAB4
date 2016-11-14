@@ -7,6 +7,6 @@ public class hawk extends carnivore
 		maxEnergy = 1000;
 		energy = 1000;
 		
-		canEat[] = {'S', 'M'};
+		char canEat[] = {'S', 'M'};
 	}
 }

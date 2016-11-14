@@ -7,6 +7,6 @@ public class mouse extends herbivore
 		maxEnergy = 750;
 		energy = 750;
 		
-		canEat[] = {'T', 'G'};
+		char canEat[] = {'T', 'G'};
 	}
 }

@@ -7,6 +7,6 @@ public class wolf extends carnivore
 		maxEnergy = 1000;
 		energy = 1000;
 		
-		canEat[] = {'R', 'D'};
+		char canEat[] = {'R', 'D'};
 	}
 }

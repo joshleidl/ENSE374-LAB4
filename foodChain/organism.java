@@ -1,11 +1,9 @@
 package foodChain;
 
-public enum 
-
 public abstract class organism
 {
-	private int energy;
-	private char symbol;
+	protected int energy;
+	protected char symbol;
 	
 	public char getSymbol()
 	{
@@ -16,4 +14,6 @@ public abstract class organism
 	{
 		return energy;
 	}
+	
+	public boolean move();
 }

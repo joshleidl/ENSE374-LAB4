@@ -7,6 +7,6 @@ public class caterpillar extends herbivore
 		maxEnergy = 500;
 		energy = 500;
 		
-		canEat[] = {'T'};
+		char canEat[] = {'T'};
 	}
 }

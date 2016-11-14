@@ -7,6 +7,6 @@ public class bluejay extends omnivore
 		maxEnergy = 750;
 		energy = 750;
 		
-		canEat[] = {'P', 'T', 'C'};
+		char canEat[] = {'P', 'T', 'C'};
 	}
 }

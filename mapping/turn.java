@@ -1,6 +1,4 @@
-package map;
-
-import foodChain.*;
+package mapping;
 
 //needs to extend maps to gain access to the map size variables
 public class turn extends map

@@ -7,6 +7,6 @@ public class rabbit extends herbivore
 		maxEnergy = 750;
 		energy = 750;
 		
-		canEat[] = {'G'};
+		char canEat[] = {'G'};
 	}
 }
