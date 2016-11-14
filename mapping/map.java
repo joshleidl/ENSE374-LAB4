@@ -105,7 +105,7 @@ public class map
 		}
 	}
 	
-	private void takeTurn()
+	public void takeTurn()
 	{
 		for (organism current : creatureList)
 		{
