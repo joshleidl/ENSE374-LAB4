@@ -6,6 +6,7 @@ public class map
 {
 	public static final char line		= '|';
 	public static final char blank 		= ' ';
+	public static final char dash		= '-';
 	private int max_rows 	= 10000;
 	private int max_columns = 10000;
 	private int row;
@@ -48,8 +49,8 @@ public class map
 	
 	public final void Print()
 	{
-		int i = 0; int j = 0; int k = 0; int l = 0;
-		if ((i >= 0) || (j >= 0) || (k >= 0) || (l >= 0))
+		int i = 0; int j = 0; int k = 0; int l = 0; int q = 0;
+		if ((i >= 0) || (j >= 0) || (k >= 0) || (l >= 0) || (q >= 0))
 		{
 			
 			for(i = 0; i < (max_columns - columnDifference(column)) + 2; i++)
@@ -64,6 +65,7 @@ public class map
 				for(k = 0; k < (max_columns - columnDifference(column)); k++)
 				{
 					System.out.print(field[j][k]);
+					
 				}
 				System.out.print(line);
 				System.out.print('\n');
