@@ -6,6 +6,7 @@ public class grasshopper extends herbivore
 	{
 		maxEnergy = 750;
 		energy = 750;
+		maxDistance = 1;
 		
 		char canEat[] = {'G'};
 	}
