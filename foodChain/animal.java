@@ -1,5 +1,8 @@
 package foodChain;
 
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.ArrayList;
+
 public abstract class animal extends organism
 {
 	protected int maxEnergy;
@@ -36,6 +39,43 @@ public abstract class animal extends organism
 			return false;
 	}
 	
-	public boolean move()
-	//public abstract void move(int cx, int cy);
+	public void moveCreature(int mapCol, int mapRow, ArrayList<organism> creatureList)
+	{
+		boolean success = false;
+		int newCol, newRow, test;
+		
+		while (success == false)
+		{
+			newCol = col + ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
+			newRow = row + ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
+			
+			if (newCol < 0 || newCol > mapCol)
+				success = false;
+			else if (newRow < 0 || newRow > mapRow)
+				success = false;
+			else
+			{
+				test = 0;
+				for (organism current : creatureList)
+				{
+					if (current.getRow() == newRow && current.getCol() == newCol)
+					{
+						if (test == 0)
+						{
+							success = eat(current);
+							if (success == false)
+								test = 1;
+						}
+					}
+				}
+				if (test == 0)
+				{
+					success = true;
+				}
+			}
+		}
+		
+		col = newCol;
+		row = newRow;
+	}
 }
