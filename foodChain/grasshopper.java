@@ -4,6 +4,8 @@ public class grasshopper extends herbivore
 {
 	public grasshopper()
 	{
+		symbol = 'P';
+		
 		maxEnergy = 750;
 		energy = 750;
 		
