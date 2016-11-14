@@ -1,5 +1,13 @@
 package foodChain;
 
+/*
+TODO:
+Implement maximum movement variable N
+
+
+
+*/
+
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.ArrayList;
 
