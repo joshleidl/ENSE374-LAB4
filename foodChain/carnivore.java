@@ -1,6 +1,7 @@
 package foodChain;
 
-public interface carnivore extends animal
+public abstract class carnivore extends animal
 {
-	
+	protected int maxEnergy = 1000;
+	protected int maxDistance = 3;
 }

@@ -1,19 +1,12 @@
 package foodChain;
 
-public abstract class organism
+import java.util.ArrayList;
+
+public interface organism
 {
-	protected int energy;
-	protected char symbol;
-	
-	public char getSymbol()
-	{
-		return symbol;
-	}
-	
-	public int getEnergy()
-	{
-		return energy;
-	}
-	
-	public boolean move();
+	public char getSymbol();
+	public int getEnergy();
+	public void setPos(int r, int c);
+	public int getRow();
+	public int getCol();
 }

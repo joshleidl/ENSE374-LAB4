@@ -6,9 +6,7 @@ public class squirrel extends herbivore
 	{
 		symbol = 'S';
 		
-		maxEnergy = 750;
 		energy = 750;
-		maxDistance = 2;
 		
 		char canEat[] = {'T'};
 	}

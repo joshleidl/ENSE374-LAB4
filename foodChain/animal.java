@@ -15,13 +15,15 @@ import java.util.ArrayList;
 Max distance variable maxDistance
 */
 
-public abstract class animal extends organism
+public abstract class animal implements organism
 {
-	protected int maxEnergy;
-	protected char canEat[];
-	protected int row;
-	protected int col;
-	protected int maxDistance;
+	char canEat[];
+	int energy;
+	int col;
+	int row;
+	int maxEnergy;
+	int maxDistance;
+	char symbol;
 	
 	private boolean checkEat(organism org)
 	{
@@ -55,7 +57,7 @@ public abstract class animal extends organism
 	public void moveCreature(int mapCol, int mapRow, ArrayList<organism> creatureList)
 	{
 		boolean success = false;
-		int newCol, newRow, test;
+		int newCol = 0, newRow = 0, test;
 		
 		while (success == false)
 		{
@@ -90,5 +92,31 @@ public abstract class animal extends organism
 		
 		col = newCol;
 		row = newRow;
+	}
+	
+	public char getSymbol()
+	{
+		return symbol;
+	}
+	
+	public int getEnergy()
+	{
+		return energy;
+	}
+	
+	public int getCol()
+	{
+		return col;
+	}
+	
+	public int getRow()
+	{
+		return row;
+	}
+	
+	public void setPos(int r, int c)
+	{
+		this.row = r;
+		this.col = c;
 	}
 }
