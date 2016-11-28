@@ -112,6 +112,10 @@ public class map
 		{
 			field[temp.getRow()][temp.getCol()] = temp.getSymbol();
 		}
+		if (temp.getEnergy() <= 0)
+		{
+			temp = null;
+		}
 	}
 	
 	public void populate(int toMake)

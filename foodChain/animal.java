@@ -57,12 +57,16 @@ public abstract class animal implements organism
 	public void moveCreature(int mapCol, int mapRow, ArrayList<organism> creatureList)
 	{
 		boolean success = false;
-		int newCol = 0, newRow = 0, test;
+		int newCol = 0, newRow = 0, test, randX, randY;
 		
 		while (success == false)
 		{
-			newCol = col + ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
-			newRow = row + ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
+			randX = ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
+			randY = ThreadLocalRandom.current().nextInt(-maxDistance, maxDistance + 1);
+			newCol = col + randY;
+			newRow = row + randX;
+			
+			energy -= 50;
 			
 			if (newCol < 0 || newCol > mapCol)
 				success = false;
@@ -92,6 +96,35 @@ public abstract class animal implements organism
 		
 		col = newCol;
 		row = newRow;
+		
+		if (randX < 0)
+		{
+			for (int i = 0; i < 0; i++)
+			{
+				energy -= 50;
+			}
+		}
+		if (randX >= 0)
+		{
+			for (int i = 0; i < 0; i--)
+			{
+				energy -= 50;
+			}
+		}
+		if (randY < 0)
+		{
+			for (int i = 0; i < 0; i++)
+			{
+				energy -= 50;
+			}
+		}
+		if (randY >= 0)
+		{
+			for (int i = 0; i < 0; i--)
+			{
+				energy -= 50;
+			}
+		}
 	}
 	
 	public char getSymbol()
