@@ -1,4 +1,4 @@
-package mapping;
+//package foodChain;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.Error.*;
@@ -46,6 +46,14 @@ public class move extends animal
 			Error("Direction out of bounds");
 	}
 	
+	public void moveCreature(int mapCol, int mapRow, organism[] creatureList)
+	{
+		this.creatureList = creatureList;
+		this.mapCol = mapCol;
+		this.mapRow = mapRow;
+		update();
+	}
+	
 	private void update()
 	{
 		boolean success = false;
@@ -81,11 +89,5 @@ public class move extends animal
 		return true;
 	}
 	
-	public void moveCreature(int mapCol, int mapRow, organism[] creatureList)
-	{
-		this.creatureList = creatureList;
-		this.mapCol = mapCol;
-		this.mapRow = mapRow;
-		update();
-	}
+	
 }
